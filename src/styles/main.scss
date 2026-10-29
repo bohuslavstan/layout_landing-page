@@ -1,3 +1,8 @@
+@import 'utils/variables';
+@import 'blocks/header';
+
 body {
   margin: 0;
+  padding-inline: 120px;
+  background-color: $color-background;
 }

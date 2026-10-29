@@ -1,0 +1,99 @@
+.header {
+  width: 100%;
+  height: $header-height;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: block;
+
+    width: $header-logo-width;
+    height: $header-logo-height;
+
+    background-image: url('../images/logo-light.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: $nav-gap;
+
+      padding: 0;
+      margin: 0;
+
+      list-style: none;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.icon {
+  position: relative;
+
+  display: block;
+
+  width: $icon-size;
+  height: $icon-size;
+
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  &--phone {
+    background-image: url('../images/phone-icon.svg');
+
+    &__text {
+      position: absolute;
+      right: calc(100% + $phone-text-gap);
+      top: 50%;
+
+      transform: translate(8px, -50%);
+      opacity: 0;
+      visibility: hidden;
+
+      width: max-content;
+
+      color: $color-white;
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      transition:
+        opacity $transition-duration $transition-timing,
+        transform $transition-duration $transition-timing,
+        visibility $transition-duration $transition-timing;
+    }
+
+    &:hover &__text {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &--menu {
+    background-image: url('../images/burger-menu-icon.svg');
+
+    transition: background-image $transition-duration $transition-timing;
+    border: none;
+
+    &:hover {
+      background-image: url('../images/burger-menu-icon-hover.svg');
+    }
+  }
+}
