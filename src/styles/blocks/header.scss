@@ -1,6 +1,8 @@
 .header {
-  width: 100%;
+  box-sizing: border-box;
+  width: 1260px;
   height: $header-height;
+  padding: 0 120px;
 
   display: flex;
   justify-content: space-between;

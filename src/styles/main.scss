@@ -1,8 +1,9 @@
 @import 'utils/variables';
 @import 'blocks/header';
+@import 'blocks/hero';
 
 body {
   margin: 0;
-  padding-inline: 120px;
+  padding: 0;
   background-color: $color-background;
 }
